@@ -15,4 +15,4 @@ def difference_between_the_two(range)
   (sum_of_squares - square_of_sum).abs
 end
 
-puts difference_between_the_two(1..10)
+puts difference_between_the_two(1..100)
