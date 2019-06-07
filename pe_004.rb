@@ -1,3 +1,5 @@
+# https://projecteuler.net/problem=4
+
 first_multipliers, second_multipliers = (100..999), (100..999)
 
 palindromes = first_multipliers.each_with_object([]) do |first_multiplier, palindrome_array|

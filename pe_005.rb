@@ -1,3 +1,5 @@
+# https://projecteuler.net/problem=5
+
 def is_whole(number)
   number % 1 == 0
 end

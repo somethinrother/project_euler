@@ -1,3 +1,5 @@
+# https://projecteuler.net/problem=6
+
 def sum_of_each_squared_value_in_range(range)
   values = range.to_a
   values.map { |num| num ** 2 }.reduce(:+)

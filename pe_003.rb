@@ -1,3 +1,5 @@
+# https://projecteuler.net/problem=3
+
 require 'prime'
 
 def next_prime(current_prime)
