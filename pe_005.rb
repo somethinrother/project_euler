@@ -9,8 +9,6 @@ number = 232700000.0
 final_number = nil
 
 loop do
-  puts number
-
   divisors.each do |divisor|
     break if !is_whole(number / divisor)
     final_number = number if is_whole(number / divisor) && divisor == 20
@@ -21,5 +19,3 @@ loop do
 end
 
 puts "#{number} is the smallest number that can be divided by 1-20 and remain whole"
-# divide by the divisors in order and break if the number not whole
-# If the divisors run out and the number is still whole, log it
