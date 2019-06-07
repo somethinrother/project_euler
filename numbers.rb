@@ -1,6 +1,6 @@
 require 'prime'
 
-class PePrime
+class Numbers
   # Always starts at the first prime, 2
   @current_prime = 2
 
