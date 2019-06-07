@@ -1,3 +1,3 @@
-sum = (1...1000).select() { |num| num % 3 == 0 || num % 5 == 0 }.reduce(:+)
+sum = (1...1000).select { |num| num % 3 == 0 || num % 5 == 0 }.reduce(:+)
 
 puts sum
