@@ -1,6 +1,12 @@
-# Define two ranges, each 100 - 999 (all possible 3 digit numbers)
+first_multipliers, second_multipliers = (100..999), (100..999)
 
-# Increment through the ranges, multiplying both numbers together, and storing
-# the result if it is palindromic
+palindromes = []
 
-# Find max entry
+first_multipliers.each do |first_multiplier|
+  second_multipliers.each do |second_multiplier|
+    product = first_multiplier * second_multiplier
+    palindromes << product if product.to_s == product.to_s.reverse
+  end
+end
+
+puts palindromes.max
