@@ -1,4 +1,3 @@
-# Create a method that produces array of Fibonacci sequence numbers
 def fibonacci_sequence(max_number, first_number, second_number)
   sequence = [first_number, second_number]
 
@@ -9,7 +8,8 @@ def fibonacci_sequence(max_number, first_number, second_number)
   end
 end
 
-puts fibonacci_sequence(700, 1, 2)
-# Filter the results of the Fibonacci array to only even numbers
+sequence = fibonacci_sequence(4_000_000, 1, 2)
+
+even_numbers = sequence.select { |num| num % 2 == 0 }
 
 # Sum the numbers
