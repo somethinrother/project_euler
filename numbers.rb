@@ -17,4 +17,8 @@ class Numbers
   def self.prime?(number)
     Prime.prime?(number)
   end
+
+  def self.is_whole(number)
+    number % 1 == 0
+  end
 end

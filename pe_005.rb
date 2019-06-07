@@ -1,8 +1,6 @@
 # https://projecteuler.net/problem=5
 
-def is_whole(number)
-  number % 1 == 0
-end
+require_relative 'numbers'
 
 def smallest_number_divisible_by_given_range(range)
   divisors = range.to_a
@@ -10,8 +8,8 @@ def smallest_number_divisible_by_given_range(range)
 
   loop do
     divisors.each do |divisor|
-      break if !is_whole(number / divisor)
-      has_remained_whole = is_whole(number / divisor) && divisor == divisors[-1]
+      break if !Numbers.is_whole(number / divisor)
+      has_remained_whole = Numbers.is_whole(number / divisor) && divisor == divisors[-1]
       return number.to_i if has_remained_whole
     end
 
