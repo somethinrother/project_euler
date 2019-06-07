@@ -1,6 +1,6 @@
 # https://projecteuler.net/problem=3
 
-require_relative 'numbers'
+require_relative 'classes/numbers'
 
 def max_prime_factor(number)
   current_prime = 2

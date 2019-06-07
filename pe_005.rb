@@ -1,6 +1,6 @@
 # https://projecteuler.net/problem=5
 
-require_relative 'numbers'
+require_relative 'classes/numbers'
 
 def smallest_number_divisible_by_given_range(range)
   divisors = range.to_a

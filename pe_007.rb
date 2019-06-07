@@ -1,6 +1,6 @@
 # https://projecteuler.net/problem=7
 
-require_relative 'numbers'
+require_relative 'classes/numbers'
 
 def find_nth_prime(n)
   (2..n).to_a.each_with_object([Numbers.current_prime]) do |_num, prime_numbers|
