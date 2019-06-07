@@ -6,21 +6,19 @@ def next_prime(current_prime)
   current_prime
 end
 
-def is_whole(number)
-  number % 1 != 0
-end
-
 def max_prime_factor(number)
   current_prime = 2
 
   loop do
     loop do
-      break if is_whole(number.to_f / current_prime)
+      # Break if the upcoming division would result in a number with a remainder
+      break if (number.to_f / current_prime) % 1 != 0
       number = number.to_f / current_prime
     end
 
-    is_prime_number = Prime.prime?(number.to_i) && is_whole(number)
-    return current_prime if is_prime_number || number.to_i == 1
+    # If the number is prime, then it is the largest prime factor
+    is_prime = Prime.prime?(number.to_i) && number % 1 == 0
+    return number.to_i if is_prime
     current_prime = next_prime(current_prime)
   end
 end
