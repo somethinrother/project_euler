@@ -13,4 +13,8 @@ class PePrime
     @current_prime += 1 until Prime.prime?(@current_prime)
     @current_prime
   end
+
+  def self.prime?(number)
+    Prime.prime?(number)
+  end
 end

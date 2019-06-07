@@ -1,12 +1,6 @@
 # https://projecteuler.net/problem=3
 
-require 'prime'
-
-def next_prime(current_prime)
-  current_prime += 1
-  current_prime += 1 until Prime.prime?(current_prime)
-  current_prime
-end
+require_relative 'pe_prime'
 
 def is_whole(number)
   number % 1 == 0
@@ -23,9 +17,9 @@ def max_prime_factor(number)
     end
 
     # If the number is prime, then it is the largest prime factor
-    is_prime = Prime.prime?(number.to_i) && is_whole(number)
+    is_prime = PePrime.prime?(number.to_i) && is_whole(number)
     return number.to_i if is_prime
-    current_prime = next_prime(current_prime)
+    current_prime = PePrime.next_prime(current_prime)
   end
 end
 
