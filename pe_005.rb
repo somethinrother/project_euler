@@ -2,20 +2,19 @@ def is_whole(number)
   number % 1 == 0
 end
 
-divisors = (1..20).to_a
+def smallest_number_divisible_by_given_range(range)
+  divisors = range.to_a
+  number = 1.0
 
-number = 232700000.0
+  loop do
+    divisors.each do |divisor|
+      break if !is_whole(number / divisor)
+      has_remained_whole = is_whole(number / divisor) && divisor == divisors[-1]
+      return number.to_i if has_remained_whole
+    end
 
-final_number = nil
-
-loop do
-  divisors.each do |divisor|
-    break if !is_whole(number / divisor)
-    final_number = number if is_whole(number / divisor) && divisor == 20
+    number += 1
   end
-
-  break if final_number
-  number += 1
 end
 
-puts "#{number} is the smallest number that can be divided by 1-20 and remain whole"
+puts smallest_number_divisible_by_given_range((1..20))
