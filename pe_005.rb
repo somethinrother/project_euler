@@ -17,4 +17,4 @@ def smallest_number_divisible_by_given_range(range)
   end
 end
 
-puts smallest_number_divisible_by_given_range((1..20))
+puts smallest_number_divisible_by_given_range(1..20)
