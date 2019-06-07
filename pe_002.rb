@@ -12,4 +12,4 @@ sequence = fibonacci_sequence(4_000_000, 1, 2)
 
 even_numbers = sequence.select { |num| num % 2 == 0 }
 
-# Sum the numbers
+puts even_numbers.reduce(:+)
