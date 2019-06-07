@@ -8,11 +8,10 @@ def next_prime(current_prime)
   current_prime
 end
 
-primes = [2]
-
-until primes.length == 10000 do
-  puts primes[-1]
-  primes << next_prime(primes[-1])
+def find_nth_prime(n)
+  (2..n).to_a.each_with_object([2]) do |_num, prime_numbers|
+    prime_numbers << next_prime(prime_numbers[-1])
+  end[-1]
 end
 
-puts next_prime(primes[-1])
+puts find_nth_prime(10001)
