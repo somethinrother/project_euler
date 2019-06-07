@@ -8,8 +8,4 @@ def fibonacci_sequence(max_number, first_number, second_number)
   end
 end
 
-sequence = fibonacci_sequence(4_000_000, 1, 2)
-
-even_numbers = sequence.select { |num| num % 2 == 0 }
-
-puts even_numbers.reduce(:+)
+puts fibonacci_sequence(4_000_000, 1, 2).select { |num| num % 2 == 0 }.reduce(:+)
