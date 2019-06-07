@@ -21,4 +21,12 @@ class Numbers
   def self.is_whole(number)
     number % 1 == 0
   end
+
+  def self.number_to_array(number)
+    number.to_s.split('').map(&:to_i)
+  end
+
+  def self.digits_in_number(number)
+    Math.log10(number).to_i
+  end
 end
