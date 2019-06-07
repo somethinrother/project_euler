@@ -1,3 +1,5 @@
+# https://projecteuler.net/problem=8
+
 require_relative 'classes/numbers'
 
 # Constants
