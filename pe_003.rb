@@ -19,7 +19,8 @@ def max_prime_factor(number)
       number = number.to_f / current_prime
     end
 
-    return current_prime if Prime.prime?(number.to_i) && is_whole(number) || number.to_i == 1
+    is_prime_number = Prime.prime?(number.to_i) && is_whole(number)
+    return current_prime if is_prime_number || number.to_i == 1
     current_prime = next_prime(current_prime)
   end
 end
