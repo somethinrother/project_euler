@@ -11,9 +11,16 @@ namespace :solutions do
     solve('001', 'https://projecteuler.net/problem=1', sum)
   end
 
-  desc 'Solve Project Euler Question 001'
+  desc 'Solve Project Euler Question 002'
   task two: :environment do
     seq = EulerComputer.instance.fibonacci_sequence(4_000_000, 1, 2).select { |num| num % 2 == 0 }.reduce(:+)
     solve('002', 'https://projecteuler.net/problem=2', seq)
+  end
+
+  desc 'Solve Project Euler Question 003'
+  task three: :environment do
+    max_factor = EulerComputer.instance.max_prime_factor(600851475143)
+
+    solve('003', 'https://projecteuler.net/problem=3', max_factor)
   end
 end
