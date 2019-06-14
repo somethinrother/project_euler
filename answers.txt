@@ -7,3 +7,4 @@ Project Euler 006: 25164150
 Project Euler 007: 104743
 Project Euler 008: 23514624000
 Project Euler 009: 31875000
+Project Euler 010: 142913828922
